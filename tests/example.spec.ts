@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('click sign up link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
+  page.setDefaultTimeout(10000);
   await page.getByRole('link', { name: 'Sign Up', exact: true }).click();
 });
 
