@@ -1,0 +1,30 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://prepmajor.com/');
+  await page.getByRole('link', { name: 'Sign up' }).click();
+  await page.getByRole('textbox', { name: 'Enter email or username' }).click();
+  await page.getByRole('link', { name: 'Sign Up', exact: true }).click();
+  await page.getByRole('textbox', { name: 'Enter your email' }).click();
+  await page.getByRole('textbox', { name: 'Enter your email' }).fill('uwemnoah@mail.com');
+  await page.getByRole('textbox', { name: 'Enter username' }).click();
+  await page.getByRole('textbox', { name: 'Enter username' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Enter username' }).fill('T');
+  await page.getByRole('textbox', { name: 'Enter username' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Enter username' }).fill('Tester223');
+  await page.getByRole('textbox', { name: 'Enter password' }).click();
+  await page.getByRole('textbox', { name: 'Enter password' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Enter password' }).fill('E');
+  await page.getByRole('textbox', { name: 'Enter password' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Enter password' }).fill('Exhibit4173');
+  await page.getByRole('textbox', { name: 'Repeat password' }).click();
+  await page.getByRole('textbox', { name: 'Repeat password' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Repeat password' }).fill('E');
+  await page.getByRole('textbox', { name: 'Repeat password' }).press('CapsLock');
+  await page.getByRole('textbox', { name: 'Repeat password' }).fill('Exhibit4173');
+  await page.locator('.masterstudy-authorization__checkbox-wrapper').first().click();
+  await page.locator('.masterstudy-authorization__checkbox-wrapper').first().click();
+  await page.getByRole('link', { name: 'Sign Up', exact: true }).click();
+  await page.getByRole('link', { name: 'Sign Up', exact: true }).click();
+  await page.getByRole('link', { name: 'Sign Up', exact: true }).click();
+});
