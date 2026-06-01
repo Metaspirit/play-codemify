@@ -1,5 +1,9 @@
 import { test, expect } from '@playwright/test';
-await page.getByRole('link', { name: 'Sign Up', exact: true }).click();
+
+test('click sign up link', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+  await page.getByRole('link', { name: 'Sign Up', exact: true }).click();
+});
 
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
